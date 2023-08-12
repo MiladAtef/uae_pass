@@ -38,7 +38,7 @@ public class UaePassPlugin: NSObject, FlutterPlugin {
         let state = arguments["state"] as! String
         UAEPASSRouter.shared.environmentConfig = UAEPassConfig(clientID: clientID, clientSecret: clientSecret, env: env)
 
-        UAEPASSRouter.shared.spConfig = SPConfig(redirectUriLogin: "https://oauthtest.com/authorization/return",
+        UAEPASSRouter.shared.spConfig = SPConfig(redirectUriLogin: "https://panel.i-pro.io/site_api/api/UAE_Pass/mobile_hook",
                                                  scope: "urn:uae:digitalid:profile",
                                                  state:state,  
                                                  successSchemeURL: redirectUriLogin+"://",
