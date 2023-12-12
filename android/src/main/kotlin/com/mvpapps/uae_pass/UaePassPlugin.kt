@@ -36,7 +36,7 @@ class UaePassPlugin: FlutterPlugin, MethodCallHandler, ActivityAware,PluginRegis
 
   private var client_id: String? = null
   private var client_secret: String? = null
-  private var redirect_url: String? = "https://panel.i-pro.io/site_api/api/UAE_Pass/mobile_hook"
+  private var redirect_url: String? = "https://panel.i-pro.io/site_api/api/UAE_Live_Pass/mobile_hook"
   private var environment: Environment = Environment.STAGING
   private var state: String? = null
   private var scheme: String? = null
@@ -101,7 +101,7 @@ class UaePassPlugin: FlutterPlugin, MethodCallHandler, ActivityAware,PluginRegis
       successHost = call.argument<String?>("successHost")
       if(redirect_url==null)
       {
-        redirect_url = "https://panel.i-pro.io/site_api/api/UAE_Pass/mobile_hook"
+        redirect_url = "https://panel.i-pro.io/site_api/api/UAE_Live_Pass/mobile_hook"
       }
       if(state==null)
       {
