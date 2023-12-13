@@ -32,15 +32,15 @@ object UAEPassRequestModels {
     private const val FAILURE_HOST = "failure"
     private const val SUCCESS_HOST = "success"
     private val STATE = generateRandomString(24)
-     val UAE_PASS_ENVIRONMENT: Environment = Environment.STAGING
+     val UAE_PASS_ENVIRONMENT: Environment = Environment.PRODUCTION
 
     private fun isPackageInstalled(packageManager: PackageManager): Boolean {
         val packageName = when (UAE_PASS_ENVIRONMENT) {
             is Environment.STAGING -> {
-                UAE_PASS_STG_PACKAGE_ID
+                UAE_PASS_PACKAGE_ID
             }
             is Environment.QA -> {
-                UAE_PASS_QA_PACKAGE_ID
+                UAE_PASS_PACKAGE_ID
             }
             is Environment.PRODUCTION -> {
                 UAE_PASS_PACKAGE_ID
